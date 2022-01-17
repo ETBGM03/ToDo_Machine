@@ -1,0 +1,59 @@
+.app-modal {
+  align-items: center;
+  background: #ffffff;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 35rem;
+  justify-content: center;
+  width: 35rem;
+}
+.app-modal > textarea {
+  border-radius: 1rem;
+  font-family: "Roboto";
+  font-size: 1.6rem;
+  height: 20rem;
+  margin-bottom: 2rem;
+  outline-color: turquoise;
+  padding: 0.8rem;
+  resize: none;
+  width: 30rem;
+}
+.ModalBackground {
+  align-items: center;
+  background: rgba(32, 35, 41, 0.8);
+  bottom: -10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  left: -10px;
+  position: fixed;
+  right: -10px;
+  top: -10px;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  height: 3rem;
+  justify-content: space-around;
+  width: 100%;
+}
+
+button {
+  border-radius: 0.5rem;
+  font-family: "Roboto";
+  font-size: 1.6rem;
+  height: 5rem;
+  margin: 0.5rem;
+  outline: transparent;
+  width: 10rem;
+}
+button:nth-child(1):hover {
+  background-color: rgb(212, 45, 45);
+}
+button:nth-child(2) {
+  background-color: rgb(38, 94, 22);
+}
+button:hover {
+  cursor: pointer;
+}

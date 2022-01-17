@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./../css/toDoSearch.css";
-const ToDoSearch = ({ search, setSearch }) => {
+import { Context } from "../context";
+const ToDoSearch = () => {
+  const { search, setSearch } = useContext(Context);
+
   let searchToDO = (valor) => {
     setSearch(valor);
   };
@@ -9,14 +12,13 @@ const ToDoSearch = ({ search, setSearch }) => {
     <div>
       <input
         type="search"
-        placeholder="Buscar.."
+        placeholder="Buscar..."
         className="TodoSearch"
         value={search}
         onChange={(e) => searchToDO(e.target.value)}
       />
-      <h2>{search}</h2>
     </div>
   );
 };
 
-export default ToDoSearch;
+export { ToDoSearch };

@@ -1,13 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../context";
 import "./../css/toDoItem.css";
 
-const ToDoItem = ({ name, completed, completado, eliminado }) => {
-  // let toDOCompleted = () => {
-  //   alert(`ya completaste el ToDO: ${name}`);
-  // };
-  // let toDoDeleted = () => {
-  //   alert(`Borraste el ToDO: ${name}`);
-  // };
+const ToDoItem = ({ completado, eliminado, completed, name }) => {
+  // const { toDoCompletado, toDoEliminado } = useContext(Context);
   return (
     <li className="TodoItem">
       <span
@@ -25,4 +21,4 @@ const ToDoItem = ({ name, completed, completado, eliminado }) => {
     </li>
   );
 };
-export default ToDoItem;
+export { ToDoItem };

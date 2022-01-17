@@ -1,14 +1,15 @@
 import React from "react";
 import "./../css/createToDo.css";
-const CreateToDo = () => {
-  let addToDO = () => {
-    alert("hola");
-  };
+const CreateToDo = ({ setModal }) => {
   return (
-    <button className="CreateTodoButton" type="submit" onClick={addToDO}>
+    <button
+      className="CreateTodoButton"
+      type="submit"
+      onClick={() => setModal((modalState) => !modalState)}
+    >
       +
     </button>
   );
 };
 
-export default CreateToDo;
+export { CreateToDo };

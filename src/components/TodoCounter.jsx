@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./../css/toDoCounter.css";
-const TodoCounter = ({ total, completados }) => {
+import { Context } from "./../context/index";
+
+const ToDoCounter = () => {
+  const { toDoCompleted, totalToDo } = useContext(Context);
   return (
     <div>
       <h2 className="contador">
-        Haz completado {completados} de <span>{total}</span> ToDos
+        Haz completado {toDoCompleted} de <span>{totalToDo}</span> ToDos
       </h2>
     </div>
   );
 };
 
-export default TodoCounter;
+export { ToDoCounter };
